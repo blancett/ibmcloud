@@ -1,0 +1,25 @@
+:ems:
+  :ems_ibm_cloud:
+    :blacklisted_event_names: []
+    :event_handling:
+      :event_groups:
+        :power:
+          :critical:
+            - IBM_CLOUD_instance_power_on
+            - IBM_CLOUD_instance_power_off
+:http_proxy:
+  :ibm_cloud:
+    :host:
+    :password:
+    :port:
+    :user:
+:workers:
+  :worker_base:
+    :event_catcher:
+      :event_catcher_ibm_cloud:
+        :poll: 20.seconds
+    :queue_worker_base:
+      :ems_metrics_collector_worker:
+        :ems_metrics_collector_worker_ibm_cloud: {}
+      :ems_refresh_worker:
+        :ems_refresh_worker_ibm_cloud: {}
